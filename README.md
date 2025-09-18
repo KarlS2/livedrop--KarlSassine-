@@ -222,7 +222,7 @@ analytics_events (
 - **Expiration**: Auto-cleanup of ended drops
 - **Persistence**: RDB snapshots + AOF for durability
 
-#### ✅ **Strengths of the Design**
+####  **Strengths of the Design**
 
 1. **Sharded Follow System**: Partitioning follows by `creator_id` brilliantly solves the celebrity creator scalability problem
 2. **Hybrid Storage Strategy**: Using PostgreSQL for transactional data, Redis for inventory, and ClickHouse for analytics optimizes each use case
@@ -232,7 +232,7 @@ analytics_events (
 6. **Analytics Foundation**: ClickHouse setup enables powerful business intelligence and performance monitoring
 
 
-#### 📊 **Scalability Features**
+####  **Scalability Features**
 
 - **Read Replicas**: Handles the 500+ RPS read requirement
 - **Sharding**: Prevents celebrity creator bottlenecks (millions of followers)
