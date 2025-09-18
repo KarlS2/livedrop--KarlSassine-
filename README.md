@@ -18,7 +18,7 @@ This document outlines the system design for LiveDrop, a flash-sale and follow p
 
 ### Microservices Architecture
 
-The system is decomposed into specialized microservices, each handling specific business domains:
+The system is decomposed into specialized microservices, each handling specific domains:
 
 #### Core Services
 - **Auth Service**: User authentication, authorization, and session management
@@ -221,10 +221,6 @@ analytics_events (
 - **Pub/Sub**: Real-time stock updates broadcast to connected clients
 - **Expiration**: Auto-cleanup of ended drops
 - **Persistence**: RDB snapshots + AOF for durability
-
-### Data Model Analysis & Requirements Coverage
-
-Your database design effectively addresses the system requirements with several smart architectural decisions:
 
 #### ✅ **Strengths of the Design**
 
