@@ -14,3 +14,5 @@
 I've selected **Smart Product Search** and **Support Chat Assistant** as my initial AI touchpoints because they directly address two critical conversion bottlenecks in e-commerce: product discovery friction and support resolution time. Smart search can immediately improve conversion rate by helping customers find products faster with natural language queries, while the support assistant can reduce the support contact rate by around 40 to 60% through instant resolution of common order status and policy questions. Both capabilities have low integration risk, leverage existing data sources (product catalog and FAQ/policies), and provide clear fallback mechanisms to existing systems. These touchpoints also generate measurable business impact through improved user experience metrics while maintaining manageable technical complexity for our first AI implementation sprint.
 
 While other proposed options seem more interesting, the complexity and risk factor (as well as the cost) makes them a less go-to option in my opinion for now.
+(i didn't want to choose two low complexity capabilities).
+
