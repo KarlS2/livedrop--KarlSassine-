@@ -2,12 +2,12 @@
 
 | Capability | Intent (user) | Inputs (this sprint) | Risk 1–5 (tag) | p95 ms | Est. cost/action | Fallback | Selected |
 |---|---|---|---|---:|---:|---|:---:|
-| Smart Product Search | Find products quickly with natural language | Product catalog, user query, search history | 2 | 300 | $0.016 | Keyword search | yes |
-| Support Chat Assistant | Get instant help with orders/policies | FAQ/policies MD, order-status API, user query | 3 | 1200 | $0.17 | Human handoff | yes |
-| Dynamic Product Recommendations | Discover relevant products | User session data, product catalog, purchase history | 4 | 800 | $0.1 | Popular items | |
-| Inventory Demand Forecasting | Predict stock needs | Historical sales, seasonal trends, market data | 4 | 2000 | $0.25 | Rule-based forecast | |
-| Review Sentiment Analysis | Understand customer feedback | Product reviews, ratings, text content | 2 | 500 | $0.05 | Star rating only | |
-| Price Optimization | Set competitive pricing | Competitor data, demand signals, cost structure | 5 | 1500 | $0.15 | Manual pricing | |
+| Smart Product Search | Find products quickly with natural language | Product catalog, user query, search history | 2 (low) | 300 | $0.016 | Keyword search | yes |
+| Support Chat Assistant | Get instant help with orders/policies | FAQ/policies MD, order-status API, user query | 3 (medium) | 1200 | $0.17 | Human handoff | yes |
+| Dynamic Product Recommendations | Discover relevant products | User session data, product catalog, purchase history | 4 (high)| 800 | $0.1 | Popular items | |
+| Inventory Demand Forecasting | Predict stock needs | Historical sales, seasonal trends, market data | 4 (high) | 2000 | $0.25 | Rule-based forecast | |
+| Review Sentiment Analysis | Understand customer feedback | Product reviews, ratings, text content | 2 (low) | 500 | $0.05 | Star rating only | |
+| Price Optimization | Set competitive pricing | Competitor data, demand signals, cost structure | 5 (high) | 1500 | $0.15 | Manual pricing | |
 
 ## Why these two
 
