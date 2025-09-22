@@ -100,8 +100,8 @@ Customer support requests overwhelm human agents with repetitive questions about
 - **Logging policy**: Store conversation summaries (not full text) for 30 days, purge PII
 
 ### Success Metrics
-- **Product metrics**: Resolution rate >75%, user satisfaction >4.2/5, avg session duration <2 minutes
-- **Business metric**: Support ticket volume reduction of 45%
+- **Product metrics**: Resolution rate >75%, user satisfaction >4.5/5, avg session duration <2 minutes
+- **Business metric**: Support ticket volume reduction of around 45%
 
 ### Feasibility Note
-Order-status API exists and FAQ/policies are in markdown format. We'll use GPT-4o-mini for conversation handling with function calling for API integration. Next prototype step: Build order status lookup chatbot with 5 common inquiry types to validate response quality and API integration patterns.
+Order-status API exists and FAQ/policies are in markdown format. We'll use GenAI (ex:GPT-4o-mini) for conversation handling with function calling for API integration. Next prototype step: Build order status lookup chatbot with 5 common inquiry types to validate response quality and API integration patterns.
