@@ -1,1 +1,14 @@
+# AI Capability Map
 
+| Capability | Intent (user) | Inputs (this sprint) | Risk 1–5 (tag) | p95 ms | Est. cost/action | Fallback | Selected |
+|---|---|---|---|---:|---:|---|:---:|
+| Smart Product Search | Find products quickly with natural language | Product catalog, user query, search history | 2 (low) | 300 | $0.003 | Keyword search | ✓ |
+| Support Chat Assistant | Get instant help with orders/policies | FAQ/policies MD, order-status API, user query | 3 (medium) | 1200 | $0.012 | Human handoff | ✓ |
+| Dynamic Product Recommendations | Discover relevant products | User session data, product catalog, purchase history | 4 (high) | 800 | $0.008 | Popular items | |
+| Inventory Demand Forecasting | Predict stock needs | Historical sales, seasonal trends, market data | 4 (high) | 2000 | $0.025 | Rule-based forecast | |
+| Review Sentiment Analysis | Understand customer feedback | Product reviews, ratings, text content | 2 (low) | 500 | $0.005 | Star rating only | |
+| Price Optimization | Set competitive pricing | Competitor data, demand signals, cost structure | 5 (very high) | 1500 | $0.015 | Manual pricing | |
+
+## Why these two
+
+We selected **Smart Product Search** and **Support Chat Assistant** as our initial AI touchpoints because they directly address two critical conversion bottlenecks in e-commerce: product discovery friction and support resolution time. Smart search can immediately improve our conversion rate by helping customers find products faster with natural language queries, while the support assistant can reduce our support contact rate by 40-60% through instant resolution of common order status and policy questions. Both capabilities have low integration risk, leverage existing data sources (product catalog and FAQ/policies), and provide clear fallback mechanisms to existing systems. These touchpoints also generate measurable business impact through improved user experience metrics while maintaining manageable technical complexity for our first AI implementation sprint.
