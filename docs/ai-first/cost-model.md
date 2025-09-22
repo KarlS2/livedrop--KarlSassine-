@@ -11,7 +11,7 @@
 
 ---
 
-## Calculation
+## Calculation(main logic)
 Cost/action = (tokens_in / 1000 * prompt_price) + (tokens_out / 1000 * completion_price)  
 Daily cost = Cost/action * Requests/day * (1 - cache_hit_rate)
 
@@ -39,7 +39,7 @@ Daily cost = $0.0195 * 50,000 * 0.20 = **$195/day**
 - Support Assistant: Cost/action = **$0.0825**, Daily = **$41.25**  
 - Typeahead Search: Cost/action = **$0.0195**, Daily = **$195**  
 - **Total daily AI costs: $236.25**  
-- **Monthly estimate: ~$7,088**
+- **Monthly estimate: ~$7,100**
 
 ---
 
