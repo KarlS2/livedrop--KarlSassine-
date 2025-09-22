@@ -1,13 +1,13 @@
-# AI Cost Model (Optimized)
+# AI Cost Model 
 
-## Assumptions
-- Model: GPT-4o-mini at $0.15/1K prompt tokens, $0.60/1K completion tokens
+## Given info
+- Model: GPT-4o-mini at $0.15/1K prompt tokens, $0.60/1K completion tokens(i selected GPT-4o-mini)
 - Support Assistant: Avg tokens in = 150, Avg tokens out = 100
 - Typeahead Search: Avg tokens in = 50, Avg tokens out = 20
 - Support Assistant requests/day = 1,000
 - Typeahead Search requests/day = 50,000
 - Support Assistant cache hit rate = 50%
-- Typeahead Search cache hit rate = 80%
+- Typeahead Search cache hit rate = 70%
 
 ---
 
