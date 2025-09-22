@@ -52,6 +52,7 @@ Customers struggle to find products using traditional keyword search, leading to
 
 ### Feasibility Note
 Product catalog is available via existing API with descriptions and metadata. We'll use OpenAI text-embedding-ada-002 for semantic search with Pinecone vector DB. Next prototype step: Build semantic search MVP with 100 products to test query understanding and result relevance before full catalog integration.
+Use embeddings (e.g., text-embedding-ada-002) with Pinecone for retrieval; use GPT-4o-mini as the reranker/explanation model. Expected avg cost per request (after cache): ≈ $0.016 (gross LLM call ≈ $0.05).
 
 ---
 
@@ -105,3 +106,4 @@ Customer support requests overwhelm human agents with repetitive questions about
 
 ### Feasibility Note
 Order-status API exists and FAQ/policies are in markdown format. We'll use GenAI (ex:GPT-4o-mini) for conversation handling with function calling for API integration. Next prototype step: Build order status lookup chatbot with 5 common inquiry types to validate response quality and API integration patterns.
+Use GPT-4o-mini for conversation handling with function-calling for order-status API. Expected avg cost per request (after cache): ≈ $0.17 (gross LLM call ≈ $0.24). Mask order IDs (hash/truncate) before sending to the model. 
