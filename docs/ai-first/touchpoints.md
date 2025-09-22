@@ -25,6 +25,7 @@ Customers struggle to find products using traditional keyword search, leading to
 - **Escalation triggers**: No results found (confidence < 0.3), inappropriate content detected
 - **UI surface**: "Can't find what you're looking for?" with human chat option
 - **Reviewer**: Customer success team reviews failed searches daily
+- **Service Target**: 4-hour response for escalated search issues
 
 ### Latency Budget
 - Query preprocessing: 50ms
@@ -52,6 +53,7 @@ Customers struggle to find products using traditional keyword search, leading to
 ### Feasibility Note
 Product catalog is available via existing API with descriptions and metadata. We'll use OpenAI text-embedding-ada-002 for semantic search with Pinecone vector DB. Next prototype step: Build semantic search MVP with 100 products to test query understanding and result relevance before full catalog integration.
 Use embeddings (e.g., text-embedding-ada-002) with Pinecone for retrieval; use GPT-4o-mini as the reranker/explanation model. Expected avg cost per request (after cache): ≈ $0.016 (gross LLM call ≈ $0.05).
+(MVP = most viable product).
 
 ---
 
@@ -80,7 +82,7 @@ Customer support requests overwhelm human agents with repetitive questions about
 - **Escalation triggers**: Confidence <0.7, angry sentiment, complex request, payment issues
 - **UI surface**: "Let me connect you with a specialist" button always visible
 - **Reviewer**: Support agents handle escalated conversations
-- **SLA**: Human response within 15 minutes for escalated chats
+- **Service Target**: Human response within 15 minutes for escalated chats
 
 ### Latency Budget
 - Intent classification: 200ms
