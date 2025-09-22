@@ -25,7 +25,6 @@ Customers struggle to find products using traditional keyword search, leading to
 - **Escalation triggers**: No results found (confidence < 0.3), inappropriate content detected
 - **UI surface**: "Can't find what you're looking for?" with human chat option
 - **Reviewer**: Customer success team reviews failed searches daily
-- **SLA**: 4-hour response for escalated search issues
 
 ### Latency Budget
 - Query preprocessing: 50ms
