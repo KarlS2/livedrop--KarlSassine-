@@ -1,17 +1,17 @@
 # AI Cost Model 
 
-## Given info
-- Model: GPT-4o-mini at $0.15/1K prompt tokens, $0.60/1K completion tokens(i selected GPT-4o-mini)
+## Given Info
+- Model: GPT-4o-mini at $0.15/1K prompt tokens, $0.60/1K completion tokens
 - Support Assistant: Avg tokens in = 150, Avg tokens out = 100
 - Typeahead Search: Avg tokens in = 50, Avg tokens out = 20
 - Support Assistant requests/day = 1,000
 - Typeahead Search requests/day = 50,000
-- Support Assistant cache hit rate = 50%
+- Support Assistant cache hit rate = 30%
 - Typeahead Search cache hit rate = 70%
 
 ---
 
-## Calculation(main logic)
+## Calculation (main logic)
 Cost/action = (tokens_in / 1000 * prompt_price) + (tokens_out / 1000 * completion_price)  
 Daily cost = Cost/action * Requests/day * (1 - cache_hit_rate)
 
@@ -21,8 +21,8 @@ Daily cost = Cost/action * Requests/day * (1 - cache_hit_rate)
 Cost/action = (150/1000 * $0.15) + (100/1000 * $0.60)  
 Cost/action = $0.0225 + $0.060 = **$0.0825**
 
-Daily cost = $0.0825 * 1,000 * (1 - 0.50)  
-Daily cost = $0.0825 * 1,000 * 0.50 = **$41.25/day**
+Daily cost = $0.0825 * 1,000 * (1 - 0.30)  
+Daily cost = $0.0825 * 1,000 * 0.70 = **$57.75/day**
 
 ---
 
@@ -30,29 +30,29 @@ Daily cost = $0.0825 * 1,000 * 0.50 = **$41.25/day**
 Cost/action = (50/1000 * $0.15) + (20/1000 * $0.60)  
 Cost/action = $0.0075 + $0.012 = **$0.0195**
 
-Daily cost = $0.0195 * 50,000 * (1 - 0.80)  
-Daily cost = $0.0195 * 50,000 * 0.20 = **$195/day**
+Daily cost = $0.0195 * 50,000 * (1 - 0.70)  
+Daily cost = $0.0195 * 50,000 * 0.30 = **$292.50/day**
 
 ---
 
 ## Results
-- Support Assistant: Cost/action = **$0.0825**, Daily = **$41.25**  
-- Typeahead Search: Cost/action = **$0.0195**, Daily = **$195**  
-- **Total daily AI costs: $236.25**  
-- **Monthly estimate: ~$7,100**
+- Support Assistant: Cost/action = **$0.0825**, Daily = **$57.75**  
+- Typeahead Search: Cost/action = **$0.0195**, Daily = **$292.50**  
+- **Total daily AI costs: $350.25**  
+- **Monthly estimate: ~$10,508**
 
 ---
 
 ## Cost Levers if Over Budget
 
 ### Typeahead Search Optimization
-- Push cache hit rate to 85% (saves ~$49/day)  
+- Push cache hit rate to 80% (saves ~$97/day)  
 - Reduce rerank tokens from 20 → 10 (saves ~$39/day)  
 - Hybrid approach: cheap vector search for 90% of queries, LLM rerank only for long-tail  
 
 ### Support Assistant Optimization
-- Pre-compute and cache top 50 FAQ answers (saves ~$10/day)  
-- Cap response length to 75 tokens (saves ~$8/day)  
+- Pre-compute and cache top 50 FAQ answers (saves ~$17/day)  
+- Cap response length to 75 tokens (saves ~$9/day)  
 - Route trivial questions (“shipping cost”, “return policy”) to static responses  
 
 ### Emergency Cost Controls
