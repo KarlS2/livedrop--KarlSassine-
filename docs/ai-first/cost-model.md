@@ -43,6 +43,8 @@ Effective cost/action with cache = $0.0525 * 0.30 = **$0.016**
 - **Total daily AI costs: $955.50**  
 - **Monthly estimate: ~$28,665**
 
+It seems that the cost is a bit high for an application of this size but the estimate price is according to the given info.
+However i might have misunderstood the numbers.
 ---
 
 ## Cost Levers if Over Budget
