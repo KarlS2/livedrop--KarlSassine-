@@ -9,5 +9,3 @@ ShopLite will implement two high-impact AI capabilities in the initial sprint to
 Both touchpoints leverage existing data sources (product catalog, FAQ/policies, order API) with clear fallback mechanisms and human escalation paths. Implementation targets 300ms search latency and 1200ms support response times.
 
 For detailed specifications, capability analysis, and cost projections, see  [AI Capability Map](/docs/ai-first/ai-capability-map.md).
-
-**Next Steps**: Feasibility prototypes for semantic search and order status chatbot, followed by A/B testing with 5% traffic allocation.
